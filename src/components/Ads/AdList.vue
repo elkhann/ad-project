@@ -2,7 +2,7 @@
   <v-container>
     <v-layout row>
       <v-flex xs12 sm6 offset-sm3>
-        <h1 class="text--secondary mb-3">My Ads</h1>
+        <h1 class="text--secondary mb-3">My ads</h1>
 
         <v-card
           class="elevation-10 mb-3"
@@ -18,8 +18,8 @@
             </v-flex>
             <v-flex xs8>
               <v-card-text>
-                <h2 class="text--primary">{{ ad.title }}</h2>
-                <p>{{ ad.description }}</p>
+                <h2 class="text--primary">{{ad.title}}</h2>
+                <p>{{ad.description}}</p>
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
@@ -45,4 +45,3 @@
     }
   }
 </script>
-

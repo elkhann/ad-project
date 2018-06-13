@@ -2,27 +2,26 @@
   <v-container>
     <v-layout row>
       <v-flex xs12 sm6 offset-sm3>
-        <h1 class="text--secondary mb-3">New Ad</h1>
+        <h1 class="text--secondary mb-3">Create new ad</h1>
         <v-form v-model="valid" ref="form" validation class="mb-3">
           <v-text-field
             name="title"
             label="Ad title"
             type="text"
-            required
             v-model="title"
+            required
             :rules="[v => !!v || 'Title is required']"
           ></v-text-field>
           <v-text-field
             name="description"
             label="Ad description"
             type="text"
-            required
-            multi-line
             v-model="description"
+            multi-line
             :rules="[v => !!v || 'Description is required']"
           ></v-text-field>
         </v-form>
-        <v-layout row class="mb-4">
+        <v-layout row class="mb-3">
           <v-flex xs12>
             <v-btn class="warning">
               Upload
@@ -32,25 +31,28 @@
         </v-layout>
         <v-layout row>
           <v-flex xs12>
-            <img src="" height="100px">
+            <img src="" height="100">
           </v-flex>
         </v-layout>
         <v-layout row>
           <v-flex xs12>
             <v-switch
-              color="primary"
               label="Add to promo?"
               v-model="promo"
+              color="primary"
             ></v-switch>
           </v-flex>
         </v-layout>
         <v-layout row>
           <v-flex xs12>
+            <v-spacer></v-spacer>
             <v-btn
               :disabled="!valid"
               class="success"
               @click="createAd"
-            >Create Ad</v-btn>
+            >
+              Create ad
+            </v-btn>
           </v-flex>
         </v-layout>
       </v-flex>
@@ -64,7 +66,7 @@
       return {
         title: '',
         description: '',
-        promo: '',
+        promo: false,
         valid: false
       }
     },
@@ -76,8 +78,9 @@
             title: this.title,
             description: this.description,
             promo: this.promo,
-            imageSrc: 'https://cdn-images-1.medium.com/max/1600/1*wqYF-8Dmh7LhtLkKfERc3Q.png'
+            imageSrc: 'https://cdn-images-1.medium.com/max/850/1*nq9cdMxtdhQ0ZGL8OuSCUQ.jpeg'
           }
+
           this.$store.dispatch('createAd', ad)
         }
       }

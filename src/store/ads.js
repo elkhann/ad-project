@@ -3,24 +3,24 @@ export default {
     ads: [
       {
         title: 'First ad',
-        description: 'Hello',
+        description: 'Hello i am description',
         promo: false,
         imageSrc: 'https://vuetifyjs.com/static/doc-images/carousel/planet.jpg',
-        id: 123
+        id: '123'
       },
       {
         title: 'Second ad',
-        description: 'Hello',
+        description: 'Hello i am description',
         promo: true,
         imageSrc: 'https://vuetifyjs.com/static/doc-images/carousel/bird.jpg',
-        id: 1234
+        id: '1234'
       },
       {
         title: 'Third ad',
-        description: 'Hello',
+        description: 'Hello i am description',
         promo: true,
         imageSrc: 'https://vuetifyjs.com/static/doc-images/carousel/sky.jpg',
-        id: 12345
+        id: '12345'
       }
     ]
   },
@@ -31,7 +31,8 @@ export default {
   },
   actions: {
     createAd ({commit}, payload) {
-      payload.id = 'qqqqqq'
+      payload.id = 'qqwqweqweqw'
+
       commit('createAd', payload)
     }
   },

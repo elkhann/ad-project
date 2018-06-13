@@ -7,7 +7,7 @@
           <v-list-tile
             avatar
             v-for="order in orders"
-            v-bind:key="order.id"
+            :key="order.id"
           >
             <v-list-tile-action>
               <v-checkbox
@@ -17,8 +17,8 @@
               ></v-checkbox>
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title>{{ order.name }}</v-list-tile-title>
-              <v-list-tile-sub-title>{{ order.tel }}</v-list-tile-sub-title>
+              <v-list-tile-title>{{order.name}}</v-list-tile-title>
+              <v-list-tile-sub-title>{{order.phone}}</v-list-tile-sub-title>
             </v-list-tile-content>
             <v-list-tile-action>
               <v-btn
@@ -40,8 +40,8 @@
         orders: [
           {
             id: 'fds3',
-            name: 'Khann',
-            tel: '8-800-123-45-67',
+            name: 'Vladilen',
+            phone: '8-921-121-12-12',
             adId: '123',
             done: false
           }
@@ -55,4 +55,3 @@
     }
   }
 </script>
-
