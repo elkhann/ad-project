@@ -31,8 +31,7 @@ export default {
   },
   actions: {
     createAd ({commit}, payload) {
-      payload.id = 'qqwqweqweqw'
-
+      payload.id = Math.random().toString()
       commit('createAd', payload)
     }
   },
